@@ -14,7 +14,7 @@ const AuthContext = createContext();
 
 const profile=[{
   profileImg:'https://tse1.mm.bing.net/th?id=OIP.y-nGyqT5AwES8oqp344z4gHaHa&pid=Api&P=0',
-  username: "Zahra Saktiwala",
+  username: "shantau",
   active:false,
   tweets:[
     { 
