@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Outlet, NavLink } from "react-router-dom";
 import {
   BellIcon,
   HashtagIcon,
@@ -38,12 +39,31 @@ const SideBar = () => {
         src="http://3.bp.blogspot.com/-NxouMmz2bOY/T8_ac97cesI/AAAAAAAAGg0/e3vY1_bdnbE/s1600/Twitter+logo+2012.png"
         alt="twitter logo"
       />
+      
       <SideBarRow Icon={HomeIcon} title="Home" />
+
+      <NavLink to="/explore">
       <SideBarRow Icon={HashtagIcon} title="Explore" />
+      </NavLink>
+      
+      <NavLink to="/notifications">
       <SideBarRow Icon={BellIcon} title="Notifications" />
+      </NavLink>
+      
+
+      <NavLink to="/message">
       <SideBarRow Icon={MailIcon} title="Messages" />
+      </NavLink>
+      
+      <NavLink to="/bookmarks">
       <SideBarRow Icon={BookmarkIcon} title="Bookmarks" />
+      </NavLink>
+      
+      <NavLink to="/lists">
       <SideBarRow Icon={CollectionIcon} title="Lists" />
+      </NavLink>
+
+      
       <button onClick={handleLogin}>
         <SideBarRow Icon={UserIcon} title={"Sign Out"} />
       </button>
