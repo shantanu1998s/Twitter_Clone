@@ -53,7 +53,7 @@ function TweetBox(props) {
             value={input}
             type={"text"}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="What's Happeneing?"
+            placeholder="What's Happening?"
           />
           <input
             className="h-10 w-full text-s outline-none placeholder:text-s"
