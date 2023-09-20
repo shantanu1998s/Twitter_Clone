@@ -40,7 +40,10 @@ const SideBar = () => {
         alt="twitter logo"
       />
       
+    <NavLink to='/'>
       <SideBarRow Icon={HomeIcon} title="Home" />
+      </NavLink>
+      
 
       <NavLink to="/explore">
       <SideBarRow Icon={HashtagIcon} title="Explore" />
