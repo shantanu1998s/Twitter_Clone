@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import GoogleButton from "react-google-button";
 import twitterLogo from "../assets/twitter-logo-scaled.jpg";
 import { UserAuth } from "../context/AuthContext";
@@ -10,27 +11,40 @@ function Home() {
   const signIn = () => {
     googleSignIn();
   };
+  
   useEffect(() => {
     if (user) {
       navigate("/main");
     }
   }, [user]);
+
+  // Add an onClick handler to the NavLink
+  const navigateToHome = () => {
+    navigate("/main");
+  };
+
   return (
     <div className="flex flex-row">
       <div className="">
         <img
-          className="hidden lg:inline lg:h-screen "
+          className="hidden lg:inline lg:h-screen"
           src={twitterLogo}
           alt=""
         />
       </div>
       <div className="flex">
-        <div>
+        {/* Wrap the img tag with NavLink */}
+        <NavLink to="/" onClick={navigateToHome}>
+          <div>
+          <NavLink to="/">
           <img
             className="m-3 h-10 w-12"
             src="http://3.bp.blogspot.com/-NxouMmz2bOY/T8_ac97cesI/AAAAAAAAGg0/e3vY1_bdnbE/s1600/Twitter+logo+2012.png"
+            alt="twitter logo"
           />
-        </div>
+          </NavLink>
+          </div>
+        </NavLink>
         <div className="m-10">
           <h1 className="text-3xl m-5 text-gray-800 md:text-4xl lg:text-5xl font-bold">
             Happening now!!
